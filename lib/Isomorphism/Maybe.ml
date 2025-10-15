@@ -9,3 +9,10 @@ let base_of_constructed
   = function
   | Left value -> Some value
   | Right () -> Nothing
+
+let isomorphism : type a. a Base.Maybe.t -> unit =
+  fun maybe ->
+  assert (
+    Complete.Maybe.(
+      maybe = base_of_constructed (base_to_constructed maybe))
+      ~equal:( = ))
