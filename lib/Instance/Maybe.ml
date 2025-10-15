@@ -1,5 +1,16 @@
 open Base
 
+module Equalizable :
+  Class.Equalizable.POLY with type 'a t = 'a Maybe.t = struct
+  include Maybe
+
+  let ( = ) left right ~equal =
+    match (left, right) with
+    | (Nothing, Nothing) -> true
+    | (Some x1, Some x2) -> equal x1 x2
+    | (_, _) -> false
+end
+
 module Monad : Class.Monad.TYPE with type 'a t = 'a Maybe.t =
 struct
   include Maybe

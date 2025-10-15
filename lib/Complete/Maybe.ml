@@ -1,4 +1,5 @@
 include Base.Maybe
+include Instance.Maybe.Equalizable
 include Instance.Maybe.Functor
 include Instance.Maybe.Liftable
 include Instance.Maybe.Applicative
