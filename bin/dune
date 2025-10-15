@@ -1,0 +1,4 @@
+(executable
+ (public_name cat2)
+ (name main)
+ (libraries cat2 ansifmt))

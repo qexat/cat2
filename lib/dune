@@ -1,0 +1,5 @@
+(library
+ (name cat2)
+ (libraries ansifmt))
+
+(include_subdirs qualified)
