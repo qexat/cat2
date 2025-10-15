@@ -1,6 +1,6 @@
 # cat2
 
-the sequel of [cat](https://github.com/qexat/cat).
+the sequel to [cat](https://github.com/qexat/cat).
 
 ## structure
 
