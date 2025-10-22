@@ -17,3 +17,11 @@ module Weak (P : Type.POLY) = struct
 end
 
 include Weak (Type.Id)
+
+module As_category (A : TYPE) :
+  Category.TYPE with type ('a, 'b) t = ('a, 'b) A.t =
+  A
+
+module As_arrow (A : TYPE) :
+  Arrow.TYPE with type ('a, 'b) t = ('a, 'b) A.t =
+  A
